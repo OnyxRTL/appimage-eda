@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Netgen
+title: "Netgen AppImage - Portable LVS Netlist Comparison Tool for Linux"
+description: "Download the portable Netgen AppImage for Linux (x86_64 and aarch64). No installation or dependencies required. Built automatically from official upstream sources."
 nav_order: 6
 ---
 

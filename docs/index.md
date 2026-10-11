@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Home
+title: "Open EDA AppImages - Portable Yosys, ABC, OpenSTA, Surelog, Netgen for Linux"
+description: "Download portable, single-file AppImages for open-source EDA tools. No installation or dependencies required. Built automatically from upstream sources."
 nav_order: 1
 ---
 

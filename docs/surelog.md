@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Surelog
+title: "Surelog AppImage - Portable SystemVerilog Parser and UHDM Compiler for Linux"
+description: "Download the portable Surelog AppImage for Linux (x86_64 and aarch64). No installation or dependencies required. Built automatically from official upstream sources."
 nav_order: 5
 ---
 

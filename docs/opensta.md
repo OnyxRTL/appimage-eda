@@ -1,6 +1,7 @@
 ---
 layout: default
-title: OpenSTA
+title: "OpenSTA AppImage - Portable Gate-Level Static Timing Analysis Tool for Linux"
+description: "Download the portable OpenSTA AppImage for Linux (x86_64 and aarch64). No installation or dependencies required. Built automatically from official upstream sources."
 nav_order: 4
 ---
 

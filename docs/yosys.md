@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Yosys
+title: "Yosys AppImage - Portable RTL Synthesis Framework for Linux"
+description: "Download the portable Yosys AppImage for Linux (x86_64 and aarch64). No installation or dependencies required. Built automatically from official upstream sources."
 nav_order: 3
 ---
 
