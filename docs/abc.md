@@ -1,6 +1,7 @@
 ---
 layout: default
-title: ABC
+title: "ABC AppImage - Portable Logic Synthesis and Formal Verification Tool for Linux"
+description: "Download the portable ABC AppImage for Linux (x86_64 and aarch64). No installation or dependencies required. Built automatically from official upstream sources."
 nav_order: 2
 ---
 

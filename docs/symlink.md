@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Symlinks and AppImage Management
+title: "AppImage Management AppImage - Portable Symlink and PATH Management Guide for Linux"
+description: "Download the portable AppImage Management AppImage for Linux (x86_64 and aarch64). No installation or dependencies required. Built automatically from official upstream sources."
 nav_order: 7
 ---
 
