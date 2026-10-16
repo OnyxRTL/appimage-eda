@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "Open EDA AppImages - Portable Yosys, ABC, OpenSTA, Surelog, Netgen for Linux"
+title: "AppImage EDAs - Portable Yosys, ABC, OpenSTA, Surelog, Netgen for Linux"
 description: "Download portable, single-file AppImages for open-source EDA tools. No installation or dependencies required. Built automatically from upstream sources."
 nav_order: 1
 ---
 
-# Open EDA AppImages
+# AppImage EDAs
 
 Portable, single-file **AppImages** for open-source EDA tools. No
 installation. No package manager. No container. Download one file,
@@ -39,9 +39,9 @@ yourself and trust what you see.**
 
 Everything is public:
 
-- The [build workflows](https://github.com/opensiliconhub/open-eda-appimage/tree/main/.github/workflows)
+- The [build workflows](https://github.com/OnyxRTL/appimage-eda/tree/main/.github/workflows)
   are readable YAML.
-- The [build logs](https://github.com/opensiliconhub/open-eda-appimage/actions)
+- The [build logs](https://github.com/OnyxRTL/appimage-eda/actions)
   are public for every release.
 - Every release ships with a SHA256 checksum.
 
@@ -89,8 +89,8 @@ versions, and checks.
 - [Netgen →](netgen.html) — LVS (layout vs. schematic) netlist comparison
 - [Symlinks and AppImage Management →](symlink.html) — *optional:* keep every AppImage in `~/AppImages` and expose it on your `PATH` via `~/.local/bin` when you want to call tools by name
 
-Follow the [releases page](https://github.com/opensiliconhub/open-eda-appimage/releases)
-or the [Discussions](https://github.com/opensiliconhub/open-eda-appimage/discussions)
+Follow the [releases page](https://github.com/OnyxRTL/appimage-eda/releases)
+or the [Discussions](https://github.com/OnyxRTL/appimage-eda/discussions)
 for updates.
 
 ---
@@ -98,14 +98,14 @@ for updates.
 ## Quick start
 
 Pick the tool and version you want, then go to its
-[release page](https://github.com/opensiliconhub/open-eda-appimage/releases)
+[release page](https://github.com/OnyxRTL/appimage-eda/releases)
 and download the AppImage for your architecture.
 
 **Yosys**
 
 ```sh
 # Download
-wget https://github.com/opensiliconhub/open-eda-appimage/releases/download/yosys-v0.69/yosys-0.69-x86_64.AppImage
+wget https://github.com/OnyxRTL/appimage-eda/releases/download/yosys-v0.69/yosys-0.69-x86_64.AppImage
 
 # Make executable and run
 chmod +x yosys-0.69-x86_64.AppImage
@@ -119,7 +119,7 @@ sha256sum -c yosys-0.69-x86_64.AppImage.sha256
 
 ```sh
 # Download
-wget https://github.com/opensiliconhub/open-eda-appimage/releases/download/abc-appimage/abc-x86_64.AppImage
+wget https://github.com/OnyxRTL/appimage-eda/releases/download/abc-appimage/abc-x86_64.AppImage
 
 # Make executable and run
 chmod +x abc-x86_64.AppImage
@@ -133,7 +133,7 @@ sha256sum -c abc-x86_64.AppImage.sha256
 
 ```sh
 # Download
-wget https://github.com/opensiliconhub/open-eda-appimage/releases/download/opensta-appimage/opensta-x86_64.AppImage
+wget https://github.com/OnyxRTL/appimage-eda/releases/download/opensta-appimage/opensta-x86_64.AppImage
 
 # Make executable and run
 chmod +x opensta-x86_64.AppImage
@@ -147,7 +147,7 @@ sha256sum -c opensta-x86_64.AppImage.sha256
 
 ```sh
 # Download
-wget https://github.com/opensiliconhub/open-eda-appimage/releases/download/surelog-v1.81/surelog-v1.81-x86_64.AppImage
+wget https://github.com/OnyxRTL/appimage-eda/releases/download/surelog-v1.81/surelog-v1.81-x86_64.AppImage
 
 # Make executable and run
 chmod +x surelog-v1.81-x86_64.AppImage
@@ -161,7 +161,7 @@ sha256sum -c surelog-v1.81-x86_64.AppImage.sha256
 
 ```sh
 # Download
-wget https://github.com/opensiliconhub/open-eda-appimage/releases/download/netgen-v1.5.323/netgen-1.5.323-x86_64.AppImage
+wget https://github.com/OnyxRTL/appimage-eda/releases/download/netgen-v1.5.323/netgen-1.5.323-x86_64.AppImage
 
 # Make executable and run (batch mode; omit -batch for the Tk console)
 chmod +x netgen-1.5.323-x86_64.AppImage
@@ -220,7 +220,7 @@ remove symlinks cleanly — is on the
 ## How releases work
 
 Each tool has its own workflow under
-[`.github/workflows/`](https://github.com/opensiliconhub/open-eda-appimage/tree/main/.github/workflows).
+[`.github/workflows/`](https://github.com/OnyxRTL/appimage-eda/tree/main/.github/workflows).
 
 Each workflow:
 
@@ -243,12 +243,12 @@ Each workflow:
 5. Publishes to GitHub Releases with a SHA256 checksum
 
 Yosys additionally has a
-[test workflow](https://github.com/opensiliconhub/open-eda-appimage/blob/main/.github/workflows/test-yosys-appimage.yml)
+[test workflow](https://github.com/OnyxRTL/appimage-eda/blob/main/.github/workflows/test-yosys-appimage.yml)
 that downloads the published AppImage and synthesizes the picorv32 RISC-V
 core with it.
 
 Build logs are public in the
-[Actions tab](https://github.com/opensiliconhub/open-eda-appimage/actions).
+[Actions tab](https://github.com/OnyxRTL/appimage-eda/actions).
 
 The exact build flags, dependency lists, and bundling decisions for each
 tool are documented on its dedicated page — see
@@ -263,4 +263,4 @@ These are **unofficial** repackagings. Each tool retains its upstream
 license and is maintained by its own team.
 
 - Bug in the tool itself? Report it upstream.
-- Bug in the packaging? [Open an issue here](https://github.com/opensiliconhub/open-eda-appimage/issues).
+- Bug in the packaging? [Open an issue here](https://github.com/OnyxRTL/appimage-eda/issues).

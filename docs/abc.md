@@ -38,7 +38,7 @@ BLIF/AIGER files or debugging a flow.
 > This is an **unofficial** repackaging. ABC is developed by the Berkeley
 > Logic Synthesis Group. Bugs in ABC itself should be reported upstream;
 > packaging problems belong in this repository's
-> [issue tracker](https://github.com/opensiliconhub/open-eda-appimage/issues).
+> [issue tracker](https://github.com/OnyxRTL/appimage-eda/issues).
 
 ---
 
@@ -59,7 +59,7 @@ from.
 ### x86_64
 
 ```sh
-wget https://github.com/opensiliconhub/open-eda-appimage/releases/download/abc-appimage/abc-x86_64.AppImage
+wget https://github.com/OnyxRTL/appimage-eda/releases/download/abc-appimage/abc-x86_64.AppImage
 chmod +x abc-x86_64.AppImage
 echo "quit" | ./abc-x86_64.AppImage
 ```
@@ -67,7 +67,7 @@ echo "quit" | ./abc-x86_64.AppImage
 ### aarch64 (ARM64)
 
 ```sh
-wget https://github.com/opensiliconhub/open-eda-appimage/releases/download/abc-appimage/abc-aarch64.AppImage
+wget https://github.com/OnyxRTL/appimage-eda/releases/download/abc-appimage/abc-aarch64.AppImage
 chmod +x abc-aarch64.AppImage
 echo "quit" | ./abc-aarch64.AppImage
 ```
@@ -97,7 +97,7 @@ at the same time.
 ## How it is built
 
 Everything happens in the
-[`build-abc-appimage.yml`](https://github.com/opensiliconhub/open-eda-appimage/blob/main/.github/workflows/build-abc-appimage.yml)
+[`build-abc-appimage.yml`](https://github.com/OnyxRTL/appimage-eda/blob/main/.github/workflows/build-abc-appimage.yml)
 workflow on GitHub-hosted runners. No step is performed by hand.
 
 ### Triggers

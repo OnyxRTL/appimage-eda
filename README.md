@@ -1,20 +1,20 @@
-# open-eda-appimage
+# appimage-eda
 
 > Portable, single-file **AppImages** for open-source EDA tools (**Yosys**, **ABC**, **OpenSTA**, **Surelog**, **Netgen**) — built automatically from official upstream sources.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-[![Build Yosys AppImage](https://github.com/opensiliconhub/open-eda-appimage/actions/workflows/build-yosys-appimage.yml/badge.svg)](https://github.com/opensiliconhub/open-eda-appimage/actions/workflows/build-yosys-appimage.yml)
-[![Build ABC AppImage](https://github.com/opensiliconhub/open-eda-appimage/actions/workflows/build-abc-appimage.yml/badge.svg)](https://github.com/opensiliconhub/open-eda-appimage/actions/workflows/build-abc-appimage.yml)
-[![Build OpenSTA AppImage](https://github.com/opensiliconhub/open-eda-appimage/actions/workflows/build-opensta-appimage.yml/badge.svg)](https://github.com/opensiliconhub/open-eda-appimage/actions/workflows/build-opensta-appimage.yml)
-[![Build Surelog AppImage](https://github.com/opensiliconhub/open-eda-appimage/actions/workflows/build-surelog-appimage.yml/badge.svg)](https://github.com/opensiliconhub/open-eda-appimage/actions/workflows/build-surelog-appimage.yml)
-[![Build Netgen AppImage](https://github.com/opensiliconhub/open-eda-appimage/actions/workflows/build-netgen-appimage.yml/badge.svg)](https://github.com/opensiliconhub/open-eda-appimage/actions/workflows/build-netgen-appimage.yml)
+[![Build Yosys AppImage](https://github.com/OnyxRTL/appimage-eda/actions/workflows/build-yosys-appimage.yml/badge.svg)](https://github.com/OnyxRTL/appimage-eda/actions/workflows/build-yosys-appimage.yml)
+[![Build ABC AppImage](https://github.com/OnyxRTL/appimage-eda/actions/workflows/build-abc-appimage.yml/badge.svg)](https://github.com/OnyxRTL/appimage-eda/actions/workflows/build-abc-appimage.yml)
+[![Build OpenSTA AppImage](https://github.com/OnyxRTL/appimage-eda/actions/workflows/build-opensta-appimage.yml/badge.svg)](https://github.com/OnyxRTL/appimage-eda/actions/workflows/build-opensta-appimage.yml)
+[![Build Surelog AppImage](https://github.com/OnyxRTL/appimage-eda/actions/workflows/build-surelog-appimage.yml/badge.svg)](https://github.com/OnyxRTL/appimage-eda/actions/workflows/build-surelog-appimage.yml)
+[![Build Netgen AppImage](https://github.com/OnyxRTL/appimage-eda/actions/workflows/build-netgen-appimage.yml/badge.svg)](https://github.com/OnyxRTL/appimage-eda/actions/workflows/build-netgen-appimage.yml)
 
 No installation. No dependencies. No container. Download one file, `chmod +x`, run.
 
 **Tools:** [Yosys](https://github.com/YosysHQ/yosys) (tagged per version), [ABC](https://github.com/berkeley-abc/abc) (rolling, rebuilt every ~10 days), [OpenSTA](https://github.com/parallaxsw/OpenSTA) (rolling, rebuilt monthly), [Surelog](https://github.com/chipsalliance/Surelog) (tagged per version) and [Netgen](https://github.com/RTimothyEdwards/netgen) (tagged per version) — each for Linux x86_64 and aarch64.
 
-**Downloads, requirements, checksums, and full build details** for Yosys, ABC, OpenSTA, Surelog and Netgen live on the documentation site: **<https://opensiliconhub.github.io/open-eda-appimage/>**
+**Downloads, requirements, checksums, and full build details** for Yosys, ABC, OpenSTA, Surelog and Netgen live on the documentation site: **<https://OnyxRTL.github.io/appimage-eda/>**
 Grab the AppImages from the [**Releases page**](../../releases).
 
 ---

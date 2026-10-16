@@ -34,13 +34,13 @@ without building the whole toolchain yourself.
 - **Upstream project:** [chipsalliance/Surelog](https://github.com/chipsalliance/Surelog)
 - **Upstream releases:** [github.com/chipsalliance/Surelog/releases](https://github.com/chipsalliance/Surelog/releases)
 - **License:** Apache License 2.0 (see
-  [LICENSE-Surelog](https://github.com/opensiliconhub/open-eda-appimage/blob/main/LICENSE-Surelog))
+  [LICENSE-Surelog](https://github.com/OnyxRTL/appimage-eda/blob/main/LICENSE-Surelog))
   — copyright Alain Dargelas
 
 > This is an **unofficial** repackaging. Surelog is developed by the Chips
 > Alliance and its contributors. Bugs in Surelog itself should be reported
 > upstream; packaging problems belong in this repository's
-> [issue tracker](https://github.com/opensiliconhub/open-eda-appimage/issues).
+> [issue tracker](https://github.com/OnyxRTL/appimage-eda/issues).
 
 ---
 
@@ -60,7 +60,7 @@ where `<arch>` is `x86_64` or `aarch64`.
 ### x86_64
 
 ```sh
-wget https://github.com/opensiliconhub/open-eda-appimage/releases/download/surelog-v1.81/surelog-v1.81-x86_64.AppImage
+wget https://github.com/OnyxRTL/appimage-eda/releases/download/surelog-v1.81/surelog-v1.81-x86_64.AppImage
 chmod +x surelog-v1.81-x86_64.AppImage
 ./surelog-v1.81-x86_64.AppImage --version
 ```
@@ -68,14 +68,14 @@ chmod +x surelog-v1.81-x86_64.AppImage
 ### aarch64 (ARM64)
 
 ```sh
-wget https://github.com/opensiliconhub/open-eda-appimage/releases/download/surelog-v1.81/surelog-v1.81-aarch64.AppImage
+wget https://github.com/OnyxRTL/appimage-eda/releases/download/surelog-v1.81/surelog-v1.81-aarch64.AppImage
 chmod +x surelog-v1.81-aarch64.AppImage
 ./surelog-v1.81-aarch64.AppImage --version
 ```
 
 To get another version, replace `v1.81` (in both the tag and the filename)
 with the version you want. All versions that have been published are listed on
-the [releases page](https://github.com/opensiliconhub/open-eda-appimage/releases).
+the [releases page](https://github.com/OnyxRTL/appimage-eda/releases).
 
 ### Verify the download
 
@@ -105,7 +105,7 @@ The SHA256 is also printed in each release's notes.
 ## How it is built
 
 Everything happens in the
-[`build-surelog-appimage.yml`](https://github.com/opensiliconhub/open-eda-appimage/blob/main/.github/workflows/build-surelog-appimage.yml)
+[`build-surelog-appimage.yml`](https://github.com/OnyxRTL/appimage-eda/blob/main/.github/workflows/build-surelog-appimage.yml)
 workflow on GitHub-hosted runners. No step is performed by hand.
 
 ### Trigger and inputs
@@ -280,7 +280,7 @@ Surelog is released under the **Apache License 2.0**, Copyright 2019 Alain
 Dargelas.
 
 - The full license text is in this repository as
-  [LICENSE-Surelog](https://github.com/opensiliconhub/open-eda-appimage/blob/main/LICENSE-Surelog).
+  [LICENSE-Surelog](https://github.com/OnyxRTL/appimage-eda/blob/main/LICENSE-Surelog).
 - The source used for each build is the unmodified upstream tag, including its
   git submodules.
 - Surelog builds in third-party components (such as ANTLR4, UHDM and other

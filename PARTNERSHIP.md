@@ -1,6 +1,6 @@
 # Community Partnership Program
 
-Welcome! The **Open EDA AppImage** project is dedicated to removing installation friction for the open-source EDA / silicon community. By packaging tools like Yosys, ABC, OpenSTA, Surelog, and Netgen into portable, single-file AppImages, we aim to make open-source EDA accessible to everyone, regardless of their Linux distribution or system configuration.
+Welcome! The **AppImage EDA** project is dedicated to removing installation friction for the open-source EDA / silicon community. By packaging tools like Yosys, ABC, OpenSTA, Surelog, and Netgen into portable, single-file AppImages, we aim to make open-source EDA accessible to everyone, regardless of their Linux distribution or system configuration.
 
 We are actively seeking **Community Partners** and **Ecosystem Supporters** who share our mission of democratizing access to open-source hardware design.
 
