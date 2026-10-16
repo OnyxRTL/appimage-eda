@@ -1,12 +1,12 @@
 title: Open EDA AppImages
 description: "Portable, single-file AppImages for open-source EDA tools: Yosys, ABC, OpenSTA, Surelog, and Netgen. No installation, no dependencies, no containers. Download and run on Linux x86_64 and aarch64."
-url: "https://opensiliconhub.github.io"
-baseurl: "/open-eda-appimage"
+url: "https://OnyxRTL.github.io"
+baseurl: "/appimage-eda"
 lang: en
 
 # SEO & Metadata
 keywords: "EDA, AppImage, Yosys, ABC, OpenSTA, Surelog, Netgen, open-source, Linux, portable, RTL synthesis, static timing analysis, FPGA, ASIC, GitHub Actions"
-author: "OpenSiliconHub"
+author: "OnyxRTL"
 
 # Theme settings
 remote_theme: just-the-docs/just-the-docs
