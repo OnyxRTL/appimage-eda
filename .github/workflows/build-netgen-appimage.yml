@@ -27,6 +27,8 @@ on:
 
 permissions:
   contents: write
+  id-token: write
+  attestations: write
 
 env:
   NETGEN_VERSION: ${{ inputs.version }}
@@ -275,6 +277,13 @@ jobs:
         id: sha
         run: bash Scripts/appimage-checksum.sh "${{ env.APPIMAGE_NAME }}"
 
+      - name: Attest build provenance
+        uses: actions/attest@v4
+        with:
+          subject-path: |
+            ${{ env.APPIMAGE_NAME }}
+            ${{ env.APPIMAGE_NAME }}.sha256
+
       - name: Upload AppImage as artifact
         uses: actions/upload-artifact@v7
         with:
@@ -300,6 +309,13 @@ jobs:
             AppImage, so no system Tcl/Tk installation is needed on the host.
 
             ---
+
+            ### 🔒 Verified Build Provenance
+            This release has been cryptographically attested by GitHub Actions. 
+            Users can verify this build using the GitHub CLI:
+            ```bash
+            gh attestation verify ${{ env.APPIMAGE_NAME }} --repo ${{ github.repository }}
+            ```
 
             ### Quick start
 
