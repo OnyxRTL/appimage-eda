@@ -19,11 +19,9 @@ Grab the AppImages from the [**Releases page**](../../releases).
 
 ---
 
-## Community Partners
+## Project status
 
-Seeking community partners - open a thread on the [Discussions page](../../discussions)
-
----
+**Deprecation notice:** Due to limited time for maintenance, this project may be deprecated or transition from AppImages to Debian (.deb) packages, which are easier to maintain. Existing AppImage releases will remain available for now, but future builds and updates are not guaranteed
 
 ## Contributing
 
