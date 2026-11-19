@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Netgen Version (e.g. 1.5.323)'
+        description: 'Netgen Version (e.g. 1.5.330)'
         required: true
         default: '1.5.323'
         type: string
@@ -182,9 +182,74 @@ jobs:
       - name: Create the AppImage
         run: |
           X11_LIBS=""
-          for lib in libX11 libXext libXpm libXt; do
+          for lib in libX11 libXext libXpm libXt libfreetype; do
             path=$(find /usr -name "${lib}.so*" | head -1)
             [ -n "$path" ] && X11_LIBS="$X11_LIBS --library=$path"
+          done
+
+          FT_SRC="$(ldconfig -p | awk '$1 == "libfreetype.so.6" { print $NF; exit }')"
+          if [ -z "$FT_SRC" ] || [ ! -f "$FT_SRC" ]; then
+            echo "Could not locate the runtime libfreetype.so.6"
+            exit 1
+          fi
+          
+          mkdir -p AppDir/usr/lib
+          cp -L "$FT_SRC" AppDir/usr/lib/libfreetype.so.6
+          
+          echo "Bundled FreeType from: $FT_SRC"
+          file AppDir/usr/lib/libfreetype.so.6
+
+          FC_SRC="$(ldconfig -p | awk '$1 == "libfontconfig.so.1" { print $NF; exit }')"
+          if [ -z "$FC_SRC" ] || [ ! -f "$FC_SRC" ]; then
+            echo "Could not locate the runtime libfontconfig.so.1"
+            exit 1
+          fi
+          
+          cp -L "$FC_SRC" AppDir/usr/lib/libfontconfig.so.1
+          echo "Bundled Fontconfig from: $FC_SRC"
+
+          set -euo pipefail
+          mkdir -p AppDir/usr/lib
+          
+          # Make already-staged libraries resolve from AppDir during ldd scans.
+          export LD_LIBRARY_PATH="$PWD/AppDir/usr/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+          
+          ALLOWED='^(linux-vdso|ld-linux|libc\.so|libm\.so|libpthread\.so|libdl\.so|librt\.so|libresolv\.so|libnsl\.so|libutil\.so)'
+          
+          declare -a queue=()
+          while IFS= read -r -d '' f; do
+            if file -b "$f" | grep -q ELF; then
+              queue+=("$f")
+            fi
+          done < <(find -L AppDir -type f -print0)
+          
+          i=0
+          while [ "$i" -lt "${#queue[@]}" ]; do
+            f="${queue[$i]}"
+            i=$((i + 1))
+            deps="$(ldd "$f")"
+          
+            if grep -q 'not found' <<< "$deps"; then
+              echo "Unresolved dependency while scanning $f:"
+              grep 'not found' <<< "$deps"
+              exit 1
+            fi
+          
+            while IFS= read -r dep; do
+              base="${dep##*/}"
+              [[ "$base" =~ $ALLOWED ]] && continue
+          
+              case "$dep" in
+                "$PWD"/AppDir/*) continue ;;
+              esac
+          
+              dest="AppDir/usr/lib/$base"
+              if [ ! -e "$dest" ]; then
+                echo "Bundling $base from $dep"
+                cp -L "$dep" "$dest"
+                queue+=("$dest")
+              fi
+            done < <(awk '{ for (i=1; i<=NF; i++) if ($i ~ /^\//) { print $i; break } }' <<< "$deps")
           done
 
           ./linuxdeploy-${{ matrix.appimage_arch }}.AppImage \
